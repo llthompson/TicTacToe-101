@@ -1,26 +1,69 @@
 
-let currentMarker = 'X';
 
+
+
+
+
+
+
+
+let currentMarker = 'X';
 let board = [
-  ['', '', ''],
-  ['', '', ''],
-  ['', '', '']
+  [null, null, null],
+  [null, null, null],
+  [null, null, null]
 ];
 
-const map = {
-  
-}
+
+
+
+
+
 
 const handleClick = (element) => {
+
+  
+
+
   console.log(`The element you clicked on has an id:  ${element.id}`)
+
+
+
   if (!document.getElementById(element.id).innerHTML) {
     addMarker(element.id)
   }
 };
 
+
+
+
+
+
+
+
+
+
+
+
 const addMarker = (id) => {
+
+
   console.log(`*** The current marker is:  ${currentMarker}. ***`)
   console.log(`Therefore, a  "${currentMarker}"  should be placed in the square with the id:  ${id}`)
+
+
+
+
+
+
+
+
+  const values = id.split('-');
+  const row = parseInt(values[0]);
+  const column = parseInt(values[0]);
+
+  board[row][column] = currentMarker;
+  console.log('board', board[row][column], board)
   document.getElementById(id).innerHTML = currentMarker;
   changeMarker()
 };
