@@ -23,37 +23,53 @@ h1 {
   font-size: 36px;
 }
 
-
-td {
-  height: 150px;
-  width: 150px;
-  text-align: center;
-  /* border: 2px solid #646464; */
-  border-radius: 5%;
-  box-shadow: 10px 10px 20px #00000033;
-  font-size: 100px;
-  background-color: white;
-  margin: 50px 49px 48px 47px;
-}
-
-
-
-table {
-  margin: auto auto;
-}
-
 button {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 18px;
   color: #b50965;
-  background-color: #ffd8df;
-  border-radius: 3px;
-  border-color: #767676;
-  padding: 6px 6px 6px 6px;
+  border-style: none;
+  border-radius: 5%;
+  background-color: white;
+  padding: 10px;
   box-shadow: 10px 10px 20px #00000033;
 }
 
+
+td {
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  border-radius: 5%;
+  box-shadow: 10px 10px 20px #00000033;
+  font-size: 100px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+
 .xoxo {
   border-spacing: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .jumbotron {
+    width: 90%;
+  }
+
+  table {
+    width: 90%;
+  }
+
+  td {
+    height: 80px;
+    width: 80px;
+    font-size: 60px;
+  }
 }
